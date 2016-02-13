@@ -1,0 +1,42 @@
+<template name="main">
+
+    <h2>Transactions</h2>
+    <button id="removeTransactions">Clear Transactions</button>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>To</th>
+            <th>From</th>
+            <th>Material</th>
+            <th>Quantity</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {{#each transactions}}
+            <tr>
+                <td>{{to}}</td>
+                <td>{{from}}</td>
+                <td>{{material}}</td>
+                <td>{{qty}}</td>
+            </tr>
+        {{/each}}
+        <tr>
+            <td>
+                <input type="text" name="to" value="" id="to"/>
+            </td>
+            <td>
+                <input type="text" name="from" value="" id="from"/>
+            </td>
+            <td>
+                <input type="text" name="material" value="" id="material"/>
+            </td>
+            <td>
+                <input type="text" name="qty" value="" id="qty" class="qty"/>
+            </td>
+        </tr>
+        </tbody>
+        <tr></tr>
+    </table>
+</template>
